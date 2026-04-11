@@ -4,6 +4,9 @@ const tiltItems = document.querySelectorAll(".tilt");
 const controller = document.getElementById("controller-hero");
 const controllerRotor = document.querySelector(".controller__rotor");
 const heroVisual = document.querySelector(".hero__visual");
+const topbar = document.querySelector(".topbar");
+const topbarToggle = document.querySelector(".topbar__toggle");
+const topbarLinks = document.querySelectorAll(".topbar__nav a, .topbar__cta");
 const canvas = document.getElementById("energy-grid");
 const seatRange = document.getElementById("seat-range");
 const seatValue = document.getElementById("seats-value");
@@ -104,6 +107,32 @@ if (controller && controllerRotor && heroVisual) {
   heroVisual.addEventListener("mouseleave", () => {
     controllerRotor.style.transform = "";
     controllerRotor.style.animation = "";
+  });
+}
+
+if (topbar && topbarToggle) {
+  topbarToggle.addEventListener("click", () => {
+    const next = !topbar.classList.contains("is-open");
+    topbar.classList.toggle("is-open", next);
+    topbarToggle.setAttribute("aria-expanded", String(next));
+  });
+
+  topbarLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth > 820) {
+        return;
+      }
+
+      topbar.classList.remove("is-open");
+      topbarToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 820) {
+      topbar.classList.remove("is-open");
+      topbarToggle.setAttribute("aria-expanded", "false");
+    }
   });
 }
 

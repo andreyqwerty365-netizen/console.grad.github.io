@@ -26,7 +26,19 @@
         </span>
       </a>
 
-      <nav class="topbar__nav" aria-label="Основная навигация">
+      <button
+        class="topbar__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Открыть меню"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="topbar__nav" id="site-nav" aria-label="Основная навигация">
         <a href="#services">Пакеты</a>
         <a href="#build-sequence">Этапы</a>
         <a href="#cases">Кейс</a>
@@ -653,11 +665,11 @@
 
         <div class="contacts__panel reveal tilt">
           <article>
-            <span>Основной контакт</span>
+            <span>Основной контакт · Иван</span>
             <a href="tel:+79933360688">8 (993) 336-06-88</a>
           </article>
           <article>
-            <span>Второй контакт</span>
+            <span>Второй контакт · Данила</span>
             <a href="tel:+79778662724">8 (977) 866-27-24</a>
           </article>
           <article>
