@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>КонсольГрад — игровые зоны под ключ</title>
+  <meta
+    name="description"
+    content="КонсольГрад создаёт игровые зоны под ключ для кафе, лаунжей, ТЦ и клубов: подбор оборудования, монтаж, запуск, атмосфера и собственное ПО для контроля игровых сессий."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <canvas class="energy-grid" id="energy-grid" aria-hidden="true"></canvas>
+
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#hero">
+        <span class="brand__badge"></span>
+        <span class="brand__text">
+          <strong>КонсольГрад</strong>
+          <span>игровые зоны под ключ</span>
+        </span>
+      </a>
+
+      <nav class="topbar__nav" aria-label="Основная навигация">
+        <a href="#services">Пакеты</a>
+        <a href="#build-sequence">Этапы</a>
+        <a href="#cases">Кейс</a>
+        <a href="#software">PS Lounge</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <div class="topbar__signal" aria-hidden="true">
+          <span>под ключ</span>
+          <strong>запуск + свой софт</strong>
+        </div>
+        <a class="topbar__cta" href="#contacts">Обсудить проект</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="hero">
+        <div class="hero__copy reveal">
+          <h1>
+            Проектируем игровые зоны,
+            <span>которые цепляют с входа</span>
+            и начинают работать как бизнес-инструмент.
+          </h1>
+
+          <p class="hero__lead">
+            КонсольГрад собирает игровые пространства под ключ для кафе, лаунжей, антикафе,
+            торговых и развлекательных центров: от подбора техники и атмосферы до запуска,
+            настройки и собственной системы контроля игровых сессий.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="#contacts">Запросить расчёт</a>
+            <a class="button button--ghost" href="#cases">Смотреть реализованный кейс</a>
+          </div>
+
+          <div class="hero__stats">
+            <article class="stat-card tilt">
+              <strong>6+ мест</strong>
+              <span>собираем полноценную консольную зону, включая симуляторы и доп. станции</span>
+            </article>
+            <article class="stat-card tilt">
+              <strong>3 пакета</strong>
+              <span>Старт, Лаунж и Флагман с понятной логикой запуска и масштабирования</span>
+            </article>
+            <article class="stat-card tilt">
+              <strong>PS Lounge</strong>
+              <span>собственное ПО для администратора: таймеры, статусы, история и отчётность</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="signal-ring signal-ring--one"></div>
+          <div class="signal-ring signal-ring--two"></div>
+          <div class="hero__orb hero__orb--one"></div>
+          <div class="hero__orb hero__orb--two"></div>
+
+          <div class="controller" id="controller-hero" aria-hidden="true">
+            <div class="controller__glow"></div>
+            <div class="controller__shadow"></div>
+            <div class="controller__rotor">
+              <div class="controller__body">
+                <span class="controller__lightbar"></span>
+                <span class="controller__touchpad"></span>
+                <span class="controller__speaker"></span>
+                <span class="controller__logo">PS</span>
+                <span class="controller__mic"></span>
+                <span class="controller__button controller__button--triangle"></span>
+                <span class="controller__button controller__button--circle"></span>
+                <span class="controller__button controller__button--cross"></span>
+                <span class="controller__button controller__button--square"></span>
+                <span class="controller__stick controller__stick--left"></span>
+                <span class="controller__stick controller__stick--right"></span>
+                <span class="controller__dpad"></span>
+                <span class="controller__trigger controller__trigger--left"></span>
+                <span class="controller__trigger controller__trigger--right"></span>
+                <span class="controller__beam controller__beam--left"></span>
+                <span class="controller__beam controller__beam--right"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__floating hero__floating--one tilt">
+            <span>под ключ</span>
+            <strong>от идеи до первого гостя</strong>
+          </div>
+
+          <div class="hero__floating hero__floating--two tilt">
+            <span>внутри проекта</span>
+            <strong>монтаж, запуск, атмосфера, контроль сессий</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics section section--compact reveal">
+        <div class="section-heading">
+          <span class="section-heading__eyebrow">Почему это работает</span>
+          <h2>Не просто “пара приставок”, а готовая точка притяжения и управляемая выручка.</h2>
+        </div>
+
+        <div class="metrics__grid">
+          <article class="metric-card tilt">
+            <strong>3</strong>
+            <span>готовых формата запуска для разного масштаба площадки</span>
+          </article>
+          <article class="metric-card tilt">
+            <strong>6 мест</strong>
+            <span>реальный кейс игровой зоны, который уже был собран и подготовлен к запуску</span>
+          </article>
+          <article class="metric-card tilt">
+            <strong>Под ключ</strong>
+            <span>техника, монтаж, атмосфера, настройка, регламент для администратора и сопровождение</span>
+          </article>
+          <article class="metric-card tilt">
+            <strong>PS Lounge</strong>
+            <span>собственная админ-система для контроля времени, загрузки станций и отчётности</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="services section" id="services">
+        <div class="section-heading reveal">
+          <span class="section-heading__eyebrow">Пакеты запуска</span>
+          <h2>Собрали линейку так, чтобы клиенту было легко понять масштаб, сроки и следующий шаг.</h2>
+          <p>
+            Каждый пакет можно адаптировать под площадь, бюджет и формат заведения, но логика запуска
+            уже структурирована: от быстрого теста спроса до полноценной флагманской зоны.
+          </p>
+        </div>
+
+        <div class="service-cards">
+          <article class="service-card reveal tilt">
+            <div class="service-card__head">
+              <span>01</span>
+              <h3>Старт</h3>
+            </div>
+            <p>Для кафе, антикафе и небольших пространств, где нужно быстро протестировать спрос без тяжёлого ремонта.</p>
+            <ul>
+              <li>2–3 игровых места</li>
+              <li>базовая мебель и свет</li>
+              <li>подбор техники под бюджет</li>
+              <li>быстрый ввод в работу</li>
+            </ul>
+          </article>
+
+          <article class="service-card service-card--featured reveal tilt">
+            <div class="service-card__label">основной пакет</div>
+            <div class="service-card__head">
+              <span>02</span>
+              <h3>Лаунж</h3>
+            </div>
+            <p>Для мест, где важны атмосфера, повторные визиты и управляемый процесс аренды игровых станций.</p>
+            <ul>
+              <li>4–6 игровых мест</li>
+              <li>дизайн-концепт и зонирование</li>
+              <li>кабель-менеджмент и сценарии света</li>
+              <li>PS Lounge как стандарт проекта</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal tilt">
+            <div class="service-card__head">
+              <span>03</span>
+              <h3>Флагман</h3>
+            </div>
+            <p>Для ТЦ, развлекательных площадок и клубов, где зона должна быть сильным источником трафика и выручки.</p>
+            <ul>
+              <li>6+ мест и расширение форматов</li>
+              <li>авто- и авиасимуляторы, VR, ПК</li>
+              <li>обучение персонала и регламент</li>
+              <li>поддержка после запуска</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="process section section--compact">
+        <div class="section-heading reveal">
+          <span class="section-heading__eyebrow">Как мы запускаем</span>
+          <h2>Клиент участвует в согласовании, а всю операционную и техническую часть мы берём на себя.</h2>
+        </div>
+
+        <div class="process__grid">
+          <article class="process-step reveal tilt">
+            <span>01</span>
+            <h3>Аудит и концепция</h3>
+            <p>Смотрим помещение, формат трафика, бюджет и задачи: удержание гостей, рост среднего чека или запуск новой зоны.</p>
+          </article>
+          <article class="process-step reveal tilt">
+            <span>02</span>
+            <h3>Комплектация</h3>
+            <p>Собираем конфигурацию оборудования, мебели, света и аксессуаров под реальную площадь и сценарий использования.</p>
+          </article>
+          <article class="process-step reveal tilt">
+            <span>03</span>
+            <h3>Закупка и монтаж</h3>
+            <p>Закрываем логистику, доставку, расстановку, монтаж, настройку игровых мест и подготовку к старту.</p>
+          </article>
+          <article class="process-step reveal tilt">
+            <span>04</span>
+            <h3>Запуск и сопровождение</h3>
+            <p>Передаём уже готовую к аренде зону, объясняем процесс работы администратору и остаёмся на связи после открытия.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="audience section section--compact">
+        <div class="section-heading reveal">
+          <span class="section-heading__eyebrow">Кому подходит</span>
+          <h2>Разные площадки заходят в проект по-разному, поэтому мы говорим не общими словами, а языком конкретной задачи.</h2>
+        </div>
+
+        <div class="audience__grid">
+          <article class="audience-card reveal tilt">
+            <span>01</span>
+            <h3>Кафе и антикафе</h3>
+            <p>Когда нужно увеличить время пребывания гостя, добавить повод вернуться и усилить атмосферу заведения.</p>
+          </article>
+          <article class="audience-card reveal tilt">
+            <span>02</span>
+            <h3>Лаунжи и бары</h3>
+            <p>Когда важен визуальный эффект, отдельная зона притяжения и понятный контроль игровых сессий для администратора.</p>
+          </article>
+          <article class="audience-card reveal tilt">
+            <span>03</span>
+            <h3>ТЦ и развлекательные центры</h3>
+            <p>Когда у площадки уже есть трафик, но нужна компактная и управляемая зона, которую можно быстро монетизировать.</p>
+          </article>
+          <article class="audience-card reveal tilt">
+            <span>04</span>
+            <h3>Клубы и event-формат</h3>
+            <p>Когда хочется добавить консольный угол, симулятор или временную игровую комнату как яркий дополнительный формат.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case section" id="cases">
+        <div class="case__content reveal">
+          <div class="section-heading section-heading--left">
+            <span class="section-heading__eyebrow">Реализованный кейс</span>
+            <h2>Зона на 6 игровых мест, где всё готово к сессии с первого дня.</h2>
+          </div>
+
+          <p>
+            Один из прошлых заказов включал шесть игровых станций, PlayStation, телевизоры, геймпады,
+            подписки, автосимулятор и Nintendo Switch. Мы закрыли закупку, доставку, установку, настройку
+            и подготовку пространства к реальной работе без перекладывания задач на клиента.
+          </p>
+
+          <div class="case__highlights">
+            <div class="case-chip tilt">6 консольных мест</div>
+            <div class="case-chip tilt">автосимулятор</div>
+            <div class="case-chip tilt">Nintendo Switch</div>
+            <div class="case-chip tilt">кабель-менеджмент</div>
+            <div class="case-chip tilt">запуск под ключ</div>
+          </div>
+        </div>
+
+        <div class="case__visual reveal">
+          <div class="showcase">
+            <div class="showcase__screen showcase__screen--main tilt">
+              <span>PLAY ZONE / 06</span>
+              <strong>Atmosphere + revenue control</strong>
+            </div>
+            <div class="showcase__screen showcase__screen--alt tilt">
+              <span>SIM RIG</span>
+              <strong>автосимулятор как магнит внимания</strong>
+            </div>
+            <div class="showcase__screen showcase__screen--mini tilt">
+              <span>SWITCH / DROP-IN</span>
+              <strong>дополнительный формат для аудитории</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="software section" id="software">
+        <div class="section-heading reveal">
+          <span class="section-heading__eyebrow">Собственное ПО</span>
+          <h2>PS Lounge превращает игровую зону из красивой витрины в управляемый рабочий инструмент.</h2>
+          <p>
+            Это локальная система администратора, которая открывается в браузере и помогает контролировать
+            каждую игровую станцию: время, статусы, историю сессий, продления и отчётность.
+          </p>
+        </div>
+
+        <div class="software__layout">
+          <div class="software__panel reveal tilt">
+            <div class="software__shell">
+              <div class="software__header">
+                <div class="software__brandline">
+                  <div class="software__logo"></div>
+                  <div>
+                    <strong>PS Lounge</strong>
+                    <span>учёт времени • локально • без сложной внедряемой инфраструктуры</span>
+                  </div>
+                </div>
+                <div class="software__clock">
+                  <span>Сейчас</span>
+                  <strong>19:27</strong>
+                </div>
+              </div>
+
+              <div class="software__tabs">
+                <span class="software__tab software__tab--active">Сессии сегодня</span>
+                <span class="software__tab">Отчёты</span>
+                <span class="software__tab">Журнал</span>
+                <span class="software__tab">Достижения</span>
+                <span class="software__tab">Настройки</span>
+              </div>
+
+              <div class="software__kpis">
+                <article class="software__kpi">
+                  <span>Активных</span>
+                  <strong>1</strong>
+                </article>
+                <article class="software__kpi">
+                  <span>Выручка</span>
+                  <strong>300 ₽</strong>
+                </article>
+                <article class="software__kpi">
+                  <span>Средний чек</span>
+                  <strong>300 ₽</strong>
+                </article>
+              </div>
+            </div>
+
+            <div class="software__stations">
+              <article class="station station--busy">
+                <div class="station__meta">
+                  <strong>PS4</strong>
+                  <em>Занята</em>
+                </div>
+                <span>Осталось 01:12 • тариф 1 час • оплачено 300 ₽</span>
+              </article>
+              <article class="station station--grace">
+                <div class="station__meta">
+                  <strong>PS5</strong>
+                  <em>Доигровка</em>
+                </div>
+                <span>+10 минут после тарифа • нужен контроль завершения</span>
+              </article>
+              <article class="station station--free">
+                <div class="station__meta">
+                  <strong>Nintendo Switch</strong>
+                  <em>Свободна</em>
+                </div>
+                <span>Готова к запуску • без активной сессии</span>
+              </article>
+              <article class="station station--overdue">
+                <div class="station__meta">
+                  <strong>Симулятор гонок</strong>
+                  <em>Просрочено</em>
+                </div>
+                <span>Время вышло • требуется действие администратора</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="software__points">
+            <article class="software-point reveal tilt">
+              <h3>Автоматический учёт времени</h3>
+              <p>Администратору не нужно держать таймеры в голове или на телефоне: система считает сама.</p>
+            </article>
+            <article class="software-point reveal tilt">
+              <h3>Понятная визуальная логика</h3>
+              <p>Статусы станции считываются с первого взгляда: свободно, занято, доигровка, просрочка.</p>
+            </article>
+            <article class="software-point reveal tilt">
+              <h3>История, отчёты, контроль</h3>
+              <p>Можно проверить, когда стартовала сессия, как завершилась аренда и что происходило в течение смены.</p>
+            </article>
+            <article class="software-point software-point--accent reveal tilt">
+              <h3>Система усиливает ценность самой зоны</h3>
+              <p>Для клиента это не просто красивое место с консолями, а понятная рабочая система: видно загрузку, время, действия администратора и ключевые показатели по смене.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="brief section section--compact" id="brief">
+        <div class="section-heading reveal">
+          <span class="section-heading__eyebrow">Бриф проекта</span>
+          <h2>Быстрый конфигуратор помогает понять, какой пакет вам ближе ещё до первого звонка.</h2>
+          <p>
+            Это не финальный расчёт сметы, а удобная стартовая рамка: формат площадки, масштаб зоны,
+            дополнительные модули и рекомендуемый путь запуска.
+          </p>
+        </div>
+
+        <div class="brief__layout">
+          <form class="brief-form reveal" id="brief-form">
+            <input type="hidden" id="venue-type" name="venueType" value="Кафе / антикафе">
+            <input type="hidden" id="priority-type" name="priority" value="Быстрый запуск">
+
+            <div class="brief-field">
+              <span>Тип площадки</span>
+              <div class="brief-segment" data-segment="venueType">
+                <button class="brief-chip is-active" type="button" data-name="venueType" data-value="Кафе / антикафе" data-tooltip="Подходит, когда нужно усилить средний чек и добавить повод задержаться подольше.">Кафе / антикафе</button>
+                <button class="brief-chip" type="button" data-name="venueType" data-value="Лаунж / бар" data-tooltip="Подходит для пространств, где решают атмосфера, визуальный эффект и повторные визиты.">Лаунж / бар</button>
+                <button class="brief-chip" type="button" data-name="venueType" data-value="ТЦ / развлекательный центр" data-tooltip="Подходит для высокопоточных площадок, где важны понятная монетизация и быстрая масштабируемость.">ТЦ / развлекательный центр</button>
+                <button class="brief-chip" type="button" data-name="venueType" data-value="Компьютерный клуб" data-tooltip="Подходит как апселл к основному формату клуба: консоли, симуляторы, VIP-зона.">Компьютерный клуб</button>
+                <button class="brief-chip" type="button" data-name="venueType" data-value="Отель / курорт" data-tooltip="Подходит для премиального сценария отдыха, семейной аудитории и lounge-формата.">Отель / курорт</button>
+                <button class="brief-chip" type="button" data-name="venueType" data-value="Ивент / pop-up формат" data-tooltip="Подходит для временных инсталляций, мероприятий, корпоративов и бренд-зон.">Ивент / pop-up формат</button>
+              </div>
+            </div>
+
+            <label class="brief-field">
+              <span>Количество мест: <strong id="seats-value">4</strong></span>
+              <input id="seat-range" name="seats" type="range" min="2" max="12" step="1" value="4">
+            </label>
+
+            <div class="brief-field">
+              <span>Что хотите добавить</span>
+              <div class="brief-options">
+                <label><input type="checkbox" name="extras" value="Автосимулятор"> Автосимулятор</label>
+                <label><input type="checkbox" name="extras" value="Nintendo Switch"> Nintendo Switch</label>
+                <label><input type="checkbox" name="extras" value="VR-зона"> VR-зона</label>
+                <label><input type="checkbox" name="extras" value="PS Lounge"> PS Lounge</label>
+              </div>
+            </div>
+
+            <div class="brief-field">
+              <span>Приоритет проекта</span>
+              <div class="brief-segment" data-segment="priority">
+                <button class="brief-chip is-active" type="button" data-name="priority" data-value="Быстрый запуск" data-tooltip="Когда нужно как можно быстрее открыть работающую зону и не растягивать старт на месяцы.">Быстрый запуск</button>
+                <button class="brief-chip" type="button" data-name="priority" data-value="Атмосфера и дизайн" data-tooltip="Когда важнее всего визуальная подача, свет, зонирование и ощущение вау у посетителя.">Атмосфера и дизайн</button>
+                <button class="brief-chip" type="button" data-name="priority" data-value="Максимальная загрузка и масштаб" data-tooltip="Когда нужен проект с запасом на рост, расширение форматов и более серьёзную операционную модель.">Максимальная загрузка и масштаб</button>
+                <button class="brief-chip" type="button" data-name="priority" data-value="Премиальный вау-эффект" data-tooltip="Когда нужно, чтобы зона выглядела как ключевая фишка пространства и запоминалась с первого взгляда.">Премиальный вау-эффект</button>
+              </div>
+              <div class="brief-hint" id="priority-hint">Когда нужно как можно быстрее открыть работающую зону и не растягивать старт на месяцы.</div>
+            </div>
+          </form>
+
+          <aside class="brief-result reveal tilt" id="brief-result">
+            <span class="brief-result__eyebrow">Рекомендация</span>
+            <h3 id="brief-package">Лаунж</h3>
+            <p id="brief-summary">
+              Для площадки среднего масштаба лучше всего подходит пакет с атмосферной подачей,
+              4–6 местами и обязательным управлением через PS Lounge.
+            </p>
+            <ul id="brief-list">
+              <li>4 игровых места</li>
+              <li>дизайн-концепт и кабель-менеджмент</li>
+              <li>PS Lounge для контроля сессий</li>
+            </ul>
+            <a class="button button--primary" href="#contacts">Обсудить этот вариант</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="build-sequence section" id="build-sequence">
+        <div class="section-heading reveal">
+          <span class="section-heading__eyebrow">Как это собирается</span>
+          <h2>Показываем не только итог, но и путь: как пустое помещение превращается в готовую игровую зону.</h2>
+          <p>
+            Это не буквальная 3D-модель объекта, а наглядный сценарий реализации проекта по этапам:
+            от пустой комнаты до полностью запущенного пространства.
+          </p>
+        </div>
+
+        <div class="build-sequence__layout">
+          <div class="build-scene reveal" id="build-scene">
+            <div class="build-room">
+              <div class="build-room__backwall"></div>
+              <div class="build-room__floor"></div>
+              <div class="build-room__neon"></div>
+              <div class="build-room__sofa build-part" data-step="2"></div>
+              <div class="build-room__chair build-part" data-step="2"></div>
+              <div class="build-room__desk build-part" data-step="3"></div>
+              <div class="build-room__screen build-room__screen--left build-part" data-step="3"></div>
+              <div class="build-room__screen build-room__screen--center build-part" data-step="3"></div>
+              <div class="build-room__screen build-room__screen--right build-part" data-step="3"></div>
+              <div class="build-room__console build-room__console--left build-part" data-step="4"></div>
+              <div class="build-room__console build-room__console--center build-part" data-step="4"></div>
+              <div class="build-room__console build-room__console--right build-part" data-step="4"></div>
+              <div class="build-room__sim build-part" data-step="4"></div>
+              <div class="build-room__lights build-part" data-step="5"></div>
+              <div class="build-room__power build-part" data-step="6"></div>
+            </div>
+          </div>
+
+          <div class="build-steps reveal">
+            <article class="build-step is-active" data-target-step="1">
+              <span>01</span>
+              <h3>Пустая комната</h3>
+              <p>Фиксируем базовую геометрию пространства и понимаем, где будет зона посадки, экранов и потока гостей.</p>
+            </article>
+            <article class="build-step" data-target-step="2">
+              <span>02</span>
+              <h3>Мебель и посадка</h3>
+              <p>Появляются диваны, кресла и логика посадки, чтобы было не просто красиво, а удобно в эксплуатации.</p>
+            </article>
+            <article class="build-step" data-target-step="3">
+              <span>03</span>
+              <h3>Экраны и компоновка</h3>
+              <p>Ставим ТВ-панели и собираем визуальный каркас зоны, от которого уже чувствуется формат будущего проекта.</p>
+            </article>
+            <article class="build-step" data-target-step="4">
+              <span>04</span>
+              <h3>Консоли и оборудование</h3>
+              <p>Добавляем PlayStation, периферию, симулятор и основные игровые станции по проектной конфигурации.</p>
+            </article>
+            <article class="build-step" data-target-step="5">
+              <span>05</span>
+              <h3>Свет и атмосфера</h3>
+              <p>Подключаем неон, декоративный свет и визуальные акценты, чтобы зона работала как точка притяжения.</p>
+            </article>
+            <article class="build-step" data-target-step="6">
+              <span>06</span>
+              <h3>Финальный запуск</h3>
+              <p>Экраны оживают, пространство выглядит цельно, и проект переходит в готовое состояние для первых гостей.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="connect section section--compact" id="connect">
+        <div class="section-heading reveal">
+          <span class="section-heading__eyebrow">Точки контакта</span>
+          <h2>Сайт, VK, Telegram и бот должны работать как единая система входа для клиента.</h2>
+          <p>
+            Для части клиентов удобнее звонок, для части — переписка. Поэтому сайт сразу должен предусматривать
+            быстрый переход в соцсети, мессенджер и дальнейшую связку с заявкой через Telegram-бота.
+          </p>
+        </div>
+
+        <div class="connect__grid">
+          <article class="connect-card reveal tilt">
+            <span>VK</span>
+            <h3>Группа компании</h3>
+            <p>Здесь будет прямая ссылка на сообщество, кейсы, новые проекты и быстрый вход для тех, кто приходит через рекомендации.</p>
+          </article>
+          <article class="connect-card reveal tilt">
+            <span>Telegram</span>
+            <h3>Канал и быстрый контакт</h3>
+            <p>Сюда хорошо встанут канал, личный контакт и короткий маршрут для заявок из рекламы, сторис и пересылок.</p>
+          </article>
+          <article class="connect-card connect-card--accent reveal tilt">
+            <span>Bot-ready</span>
+            <h3>Будущая интеграция с ботом</h3>
+            <p>Следующим шагом сюда можно подключить Telegram-бота или форму брифа, чтобы заявки собирались уже без ручной переписки на старте.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="reviews section section--compact">
+        <div class="section-heading reveal">
+          <span class="section-heading__eyebrow">Отзывы и эффект</span>
+          <h2>Здесь мы показываем не просто красивый дизайн, а ощущение готового работающего пространства.</h2>
+        </div>
+
+        <div class="reviews__grid">
+          <article class="review-card reveal tilt">
+            <p>“Нужно было не просто поставить консоли, а собрать полноценную игровую комнату, чтобы можно было запускать гостей без долгой настройки.”</p>
+            <strong>Проект на 6 мест</strong>
+            <span>акцент на скорость запуска и готовность к работе</span>
+          </article>
+          <article class="review-card reveal tilt">
+            <p>“Сильнее всего заходит то, что зона сразу выглядит как отдельная точка притяжения, а администратор понимает, что у кого происходит по времени.”</p>
+            <strong>Формат lounge / anti-cafe</strong>
+            <span>атмосфера + контроль сессий</span>
+          </article>
+          <article class="review-card reveal tilt">
+            <p>“Когда у проекта есть и железо, и монтаж, и софт для учёта, клиенту гораздо проще принять решение, потому что он видит готовую систему.”</p>
+            <strong>B2B-логика запуска</strong>
+            <span>меньше хаоса, больше управляемости</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq section section--compact">
+        <div class="section-heading reveal">
+          <span class="section-heading__eyebrow">FAQ</span>
+          <h2>Собрали вопросы, которые чаще всего возникают до старта проекта.</h2>
+        </div>
+
+        <div class="faq__list">
+          <details class="faq-item reveal">
+            <summary>Сколько времени занимает запуск игровой зоны?</summary>
+            <p>Срок зависит от состава проекта, но логика у нас одна: сначала согласуем формат и комплект, затем закрываем закупку, монтаж, настройку и передачу в работу. На первом созвоне можно быстро понять реалистичный диапазон сроков под вашу площадку.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Можно ли начать с небольшой зоны и потом расшириться?</summary>
+            <p>Да. Для этого и нужна логика пакетов: можно стартовать с компактного формата, проверить спрос и затем расширить зону дополнительными местами, симуляторами или новыми форматами.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Что вы берёте на себя кроме оборудования?</summary>
+            <p>Подбор комплекта, логистику, монтаж, настройку, подготовку к запуску, сценарии света и атмосферы, а также внедрение PS Lounge там, где это нужно для работы администратора и контроля сессий.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Можно ли обсудить нестандартный формат под конкретную площадку?</summary>
+            <p>Да. Пакеты нужны как понятная база, но внутри них можно собрать индивидуальную конфигурацию под площадь, бюджет, формат гостей и желаемый сценарий монетизации.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Какие платформы и форматы можно заложить в проект?</summary>
+            <p>В зависимости от задачи и бюджета в проект можно включить PlayStation-зоны, Nintendo Switch, автосимуляторы, VR-формат, игровые ПК и комбинированные посадочные решения для разных типов гостей.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Можно ли потом расширить сайт и подключить Telegram-бота или форму заявки?</summary>
+            <p>Да. Текущая версия уже сделана как готовая база для сайта, и в неё можно дальше добавить рабочие ссылки на VK и Telegram, форму захвата лида, интеграцию с ботом и дополнительные страницы под кейсы или услуги.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="contacts section" id="contacts">
+        <div class="contacts__copy reveal">
+          <div class="section-heading section-heading--left">
+            <span class="section-heading__eyebrow">Контакты</span>
+            <h2>Если хотите собрать игровую зону, которая выглядит эффектно и реально работает, давайте обсудим задачу.</h2>
+          </div>
+
+          <p>
+            Расскажите, где будет располагаться зона, сколько места вы готовы выделить и какой формат нужен:
+            быстрый тест, атмосферный lounge-блок или флагманская игровая точка с расширением под PlayStation, Switch, симуляторы и другие форматы.
+          </p>
+
+          <div class="contacts__actions">
+            <a class="button button--primary" href="tel:+79933360688">Позвонить сейчас</a>
+            <a class="button button--ghost" href="#connect">VK / Telegram</a>
+          </div>
+        </div>
+
+        <div class="contacts__panel reveal tilt">
+          <article>
+            <span>Основной контакт</span>
+            <a href="tel:+79933360688">8 (993) 336-06-88</a>
+          </article>
+          <article>
+            <span>Второй контакт</span>
+            <a href="tel:+79778662724">8 (977) 866-27-24</a>
+          </article>
+          <article>
+            <span>Формат работы</span>
+            <p>Игровые комнаты, консольные зоны, симуляторы, запуск и сопровождение.</p>
+          </article>
+          <article>
+            <span>Что обсудить на первом звонке</span>
+            <p>Тип площадки, площадь, бюджет, желаемое количество мест, сроки, формат запуска и набор платформ: PlayStation, Switch, симулятор, VR или смешанная зона.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <p>КонсольГрад</p>
+        <span>Игровые зоны под ключ для заведений, клубов и развлекательных пространств.</span>
+      </div>
+      <div class="footer__note">
+        <strong>Готовая база для запуска сайта</strong>
+        <span>Этот лендинг можно загрузить на домен и дальше расширять кейсами, формой заявки, VK, Telegram и ботом.</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
