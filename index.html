@@ -354,15 +354,15 @@
               <div class="software__kpis">
                 <article class="software__kpi">
                   <span>Активных</span>
-                  <strong>1</strong>
+                  <strong>4</strong>
                 </article>
                 <article class="software__kpi">
                   <span>Выручка</span>
-                  <strong>300 ₽</strong>
+                  <strong>8 200 ₽</strong>
                 </article>
                 <article class="software__kpi">
                   <span>Средний чек</span>
-                  <strong>300 ₽</strong>
+                  <strong>1 400 ₽</strong>
                 </article>
               </div>
             </div>
@@ -373,14 +373,14 @@
                   <strong>PS4</strong>
                   <em>Занята</em>
                 </div>
-                <span>Осталось 01:12 • тариф 1 час • оплачено 300 ₽</span>
+                <span>Осталось 01:12 • тариф 2 часа • оплачено 1 400 ₽</span>
               </article>
               <article class="station station--grace">
                 <div class="station__meta">
                   <strong>PS5</strong>
                   <em>Доигровка</em>
                 </div>
-                <span>+10 минут после тарифа • нужен контроль завершения</span>
+                <span>+10 минут после тарифа • продление подтверждено администратором</span>
               </article>
               <article class="station station--free">
                 <div class="station__meta">
@@ -391,7 +391,7 @@
               </article>
               <article class="station station--overdue">
                 <div class="station__meta">
-                  <strong>Симулятор гонок</strong>
+                  <strong>Sim rig</strong>
                   <em>Просрочено</em>
                 </div>
                 <span>Время вышло • требуется действие администратора</span>
@@ -502,57 +502,57 @@
         </div>
 
         <div class="build-sequence__layout">
-          <div class="build-scene reveal" id="build-scene">
-            <div class="build-room">
-              <div class="build-room__backwall"></div>
-              <div class="build-room__floor"></div>
-              <div class="build-room__neon"></div>
-              <div class="build-room__sofa build-part" data-step="2"></div>
-              <div class="build-room__chair build-part" data-step="2"></div>
-              <div class="build-room__desk build-part" data-step="3"></div>
-              <div class="build-room__screen build-room__screen--left build-part" data-step="3"></div>
-              <div class="build-room__screen build-room__screen--center build-part" data-step="3"></div>
-              <div class="build-room__screen build-room__screen--right build-part" data-step="3"></div>
-              <div class="build-room__console build-room__console--left build-part" data-step="4"></div>
-              <div class="build-room__console build-room__console--center build-part" data-step="4"></div>
-              <div class="build-room__console build-room__console--right build-part" data-step="4"></div>
-              <div class="build-room__sim build-part" data-step="4"></div>
-              <div class="build-room__lights build-part" data-step="5"></div>
-              <div class="build-room__power build-part" data-step="6"></div>
-            </div>
-          </div>
+          <div class="build-scene build-scene--single reveal">
+            <div class="build-sequence-shell">
+              <div class="build-room build-room--single">
+                <video
+                  id="build-sequence-video"
+                  class="build-sequence-video"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  preload="metadata"
+                  poster="./assets/stages/room-stage-06.jpeg"
+                  aria-label="Объединённый ролик сборки игровой зоны КонсольГрад"
+                  disablepictureinpicture
+                  disableremoteplayback
+                  tabindex="-1"
+                >
+                  <source src="./assets/stage-videos/build-sequence-full.mp4" type="video/mp4">
+                </video>
+              </div>
 
-          <div class="build-steps reveal">
-            <article class="build-step is-active" data-target-step="1">
-              <span>01</span>
-              <h3>Пустая комната</h3>
-              <p>Фиксируем базовую геометрию пространства и понимаем, где будет зона посадки, экранов и потока гостей.</p>
-            </article>
-            <article class="build-step" data-target-step="2">
-              <span>02</span>
-              <h3>Мебель и посадка</h3>
-              <p>Появляются диваны, кресла и логика посадки, чтобы было не просто красиво, а удобно в эксплуатации.</p>
-            </article>
-            <article class="build-step" data-target-step="3">
-              <span>03</span>
-              <h3>Экраны и компоновка</h3>
-              <p>Ставим ТВ-панели и собираем визуальный каркас зоны, от которого уже чувствуется формат будущего проекта.</p>
-            </article>
-            <article class="build-step" data-target-step="4">
-              <span>04</span>
-              <h3>Консоли и оборудование</h3>
-              <p>Добавляем PlayStation, периферию, симулятор и основные игровые станции по проектной конфигурации.</p>
-            </article>
-            <article class="build-step" data-target-step="5">
-              <span>05</span>
-              <h3>Свет и атмосфера</h3>
-              <p>Подключаем неон, декоративный свет и визуальные акценты, чтобы зона работала как точка притяжения.</p>
-            </article>
-            <article class="build-step" data-target-step="6">
-              <span>06</span>
-              <h3>Финальный запуск</h3>
-              <p>Экраны оживают, пространство выглядит цельно, и проект переходит в готовое состояние для первых гостей.</p>
-            </article>
+              <aside class="build-stage-panel">
+                <div class="build-stage-list">
+                  <article class="build-stage-card is-active" data-build-phase="0">
+                    <span>01</span>
+                    <h3>Мебель и посадка</h3>
+                    <p>Появляются диваны, кресла и посадка, чтобы зона сразу читалась как место для игровых сессий.</p>
+                  </article>
+                  <article class="build-stage-card" data-build-phase="1">
+                    <span>02</span>
+                    <h3>Экраны</h3>
+                    <p>В кадре появляется экранная часть, и пространство начинает выглядеть как настоящая игровая точка, а не просто интерьер.</p>
+                  </article>
+                  <article class="build-stage-card" data-build-phase="2">
+                    <span>03</span>
+                    <h3>Техника</h3>
+                    <p>Подключаются консоли, игровые станции и вся основа рабочего сценария, на которой потом держится загрузка зоны.</p>
+                  </article>
+                  <article class="build-stage-card" data-build-phase="3">
+                    <span>04</span>
+                    <h3>Свет и атмосфера</h3>
+                    <p>Включается световой сценарий, за счёт которого пространство начинает визуально цеплять с первого взгляда.</p>
+                  </article>
+                  <article class="build-stage-card" data-build-phase="4">
+                    <span>05</span>
+                    <h3>Финальный запуск</h3>
+                    <p>Все элементы собираются в цельный premium-lounge, который уже выглядит как готовый бизнес-продукт.</p>
+                  </article>
+                </div>
+              </aside>
+            </div>
           </div>
         </div>
       </section>
@@ -572,16 +572,19 @@
             <span>VK</span>
             <h3>Группа компании</h3>
             <p>Здесь будет прямая ссылка на сообщество, кейсы, новые проекты и быстрый вход для тех, кто приходит через рекомендации.</p>
+            <a class="connect-card__link" href="https://vk.ru/club237339856" target="_blank" rel="noreferrer">Открыть VK</a>
           </article>
           <article class="connect-card reveal tilt">
             <span>Telegram</span>
             <h3>Канал и быстрый контакт</h3>
             <p>Сюда хорошо встанут канал, личный контакт и короткий маршрут для заявок из рекламы, сторис и пересылок.</p>
+            <a class="connect-card__link" href="https://t.me/KonsolGrad" target="_blank" rel="noreferrer">Открыть Telegram</a>
           </article>
           <article class="connect-card connect-card--accent reveal tilt">
             <span>Bot-ready</span>
             <h3>Будущая интеграция с ботом</h3>
             <p>Следующим шагом сюда можно подключить Telegram-бота или форму брифа, чтобы заявки собирались уже без ручной переписки на старте.</p>
+            <a class="connect-card__link" href="https://t.me/KonsolGrad" target="_blank" rel="noreferrer">Канал как база для бота</a>
           </article>
         </div>
       </section>
@@ -659,7 +662,8 @@
 
           <div class="contacts__actions">
             <a class="button button--primary" href="tel:+79933360688">Позвонить сейчас</a>
-            <a class="button button--ghost" href="#connect">VK / Telegram</a>
+            <a class="button button--ghost" href="https://t.me/KonsolGrad" target="_blank" rel="noreferrer">Telegram</a>
+            <a class="button button--ghost" href="https://vk.ru/club237339856" target="_blank" rel="noreferrer">VK</a>
           </div>
         </div>
 
@@ -667,10 +671,16 @@
           <article>
             <span>Основной контакт · Иван</span>
             <a href="tel:+79933360688">8 (993) 336-06-88</a>
+            <div class="contacts__actions-row">
+              <button class="contact-copy" type="button" data-copy="+79933360688">Скопировать номер</button>
+            </div>
           </article>
           <article>
             <span>Второй контакт · Данила</span>
             <a href="tel:+79778662724">8 (977) 866-27-24</a>
+            <div class="contacts__actions-row">
+              <button class="contact-copy" type="button" data-copy="+79778662724">Скопировать номер</button>
+            </div>
           </article>
           <article>
             <span>Формат работы</span>
@@ -694,6 +704,11 @@
         <span>Этот лендинг можно загрузить на домен и дальше расширять кейсами, формой заявки, VK, Telegram и ботом.</span>
       </div>
     </footer>
+
+    <div class="mobile-cta">
+      <a class="mobile-cta__button mobile-cta__button--ghost" href="tel:+79933360688">Позвонить</a>
+      <a class="mobile-cta__button mobile-cta__button--primary" href="#contacts">Обсудить проект</a>
+    </div>
   </div>
 
   <script src="./script.js"></script>

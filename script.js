@@ -18,8 +18,9 @@ const briefList = document.getElementById("brief-list");
 const briefForm = document.getElementById("brief-form");
 const briefChips = document.querySelectorAll(".brief-chip");
 const priorityHint = document.getElementById("priority-hint");
-const buildScene = document.getElementById("build-scene");
-const buildSteps = document.querySelectorAll(".build-step");
+const buildSequenceVideo = document.getElementById("build-sequence-video");
+const buildStageCards = document.querySelectorAll(".build-stage-card");
+const copyButtons = document.querySelectorAll(".contact-copy");
 
 const priorityDescriptions = {
   "Быстрый запуск": "Когда нужно как можно быстрее открыть работающую зону и не растягивать старт на месяцы.",
@@ -44,9 +45,7 @@ const revealObserver = new IntersectionObserver(
       observer.unobserve(entry.target);
     });
   },
-  {
-    threshold: 0.18,
-  }
+  { threshold: 0.18 }
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
@@ -65,8 +64,7 @@ function animateCounter(node) {
   function step(now) {
     const progress = Math.min((now - startTime) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
-    const value = Math.round(target * eased);
-    node.textContent = value;
+    node.textContent = Math.round(target * eased);
 
     if (progress < 1) {
       requestAnimationFrame(step);
@@ -172,6 +170,7 @@ if (canvas) {
       if (particle.x < 0 || particle.x > window.innerWidth) {
         particle.vx *= -1;
       }
+
       if (particle.y < 0 || particle.y > window.innerHeight) {
         particle.vy *= -1;
       }
@@ -265,7 +264,7 @@ function getBriefRecommendation() {
   }
 
   if (!extras.includes("PS Lounge") && packageName !== "Старт") {
-    bullets.push("рекомендуем добавить PS Lounge для контроля сессий");
+    bullets.push("с большой вероятностью сюда стоит добавить PS Lounge для контроля сессий");
   }
 
   return { packageName, summary, bullets };
@@ -344,47 +343,93 @@ briefChips.forEach((chip) => {
 if (priorityHint) {
   priorityHint.textContent =
     priorityDescriptions[priorityType?.value] ||
-    'Когда нужно как можно быстрее открыть работающую зону и не растягивать старт на месяцы.';
+    "Когда нужно как можно быстрее открыть работающую зону и не растягивать старт на месяцы.";
 }
 
-if (buildScene && buildSteps.length) {
-  let activeStep = 1;
-  let buildTimer = null;
+if (buildSequenceVideo && buildStageCards.length) {
+  const buildTimeline = [
+    {
+      from: 0,
+      to: 0.24
+    },
+    {
+      from: 0.24,
+      to: 0.46
+    },
+    {
+      from: 0.46,
+      to: 0.67
+    },
+    {
+      from: 0.67,
+      to: 0.84
+    },
+    {
+      from: 0.84,
+      to: 1
+    }
+  ];
 
-  function setBuildStep(step) {
-    activeStep = step;
-    buildScene.dataset.activeStep = String(step);
-    buildSteps.forEach((card) => {
-      card.classList.toggle("is-active", Number(card.dataset.step) === step);
+  let activeBuildPhase = -1;
+
+  function applyBuildPhase(index) {
+    if (index === activeBuildPhase || !buildTimeline[index]) {
+      return;
+    }
+
+    activeBuildPhase = index;
+
+    buildStageCards.forEach((card) => {
+      card.classList.toggle("is-active", Number(card.dataset.buildPhase) === index);
     });
   }
 
-  function queueBuildLoop() {
-    window.clearInterval(buildTimer);
-    buildTimer = window.setInterval(() => {
-      activeStep = activeStep >= 6 ? 1 : activeStep + 1;
-      setBuildStep(activeStep);
+  function syncBuildPhase() {
+    const duration = buildSequenceVideo.duration;
+    if (!duration || Number.isNaN(duration)) {
+      applyBuildPhase(0);
+      return;
+    }
+
+    const progress = (buildSequenceVideo.currentTime % duration) / duration;
+    const nextIndex = buildTimeline.findIndex((phase) => progress >= phase.from && progress < phase.to);
+    applyBuildPhase(nextIndex === -1 ? buildTimeline.length - 1 : nextIndex);
+  }
+
+  buildSequenceVideo.addEventListener("loadedmetadata", syncBuildPhase);
+  buildSequenceVideo.addEventListener("timeupdate", syncBuildPhase);
+  buildSequenceVideo.addEventListener("seeking", syncBuildPhase);
+  buildSequenceVideo.addEventListener("play", syncBuildPhase);
+  buildSequenceVideo.addEventListener("ended", () => applyBuildPhase(0));
+
+  const playAttempt = buildSequenceVideo.play();
+  if (playAttempt && typeof playAttempt.catch === "function") {
+    playAttempt.catch(() => {});
+  }
+
+  applyBuildPhase(0);
+}
+
+copyButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const value = button.dataset.copy;
+    if (!value) {
+      return;
+    }
+
+    const originalLabel = button.textContent;
+
+    try {
+      await navigator.clipboard.writeText(value);
+      button.textContent = "Номер скопирован";
+      button.classList.add("is-copied");
+    } catch (error) {
+      button.textContent = "Скопируйте вручную";
+    }
+
+    window.setTimeout(() => {
+      button.textContent = originalLabel;
+      button.classList.remove("is-copied");
     }, 1800);
-  }
-
-  buildSteps.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      const step = Number(card.dataset.step);
-      setBuildStep(step);
-      window.clearInterval(buildTimer);
-    });
-
-    card.addEventListener("mouseleave", () => {
-      queueBuildLoop();
-    });
-
-    card.addEventListener("click", () => {
-      const step = Number(card.dataset.step);
-      setBuildStep(step);
-      queueBuildLoop();
-    });
   });
-
-  setBuildStep(1);
-  queueBuildLoop();
-}
+});
