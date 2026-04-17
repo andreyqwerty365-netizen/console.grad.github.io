@@ -1,0 +1,15 @@
+Copyright (c) 2026 ConsoleGrad / КонсольГрад
+
+All rights reserved.
+
+This repository and the published website materials, including but not limited to text, design, layout, photographs, videos, case studies, UI elements, and related assets, are proprietary.
+
+No part of these materials may be copied, reproduced, republished, distributed, modified, or used for commercial purposes without prior written permission from the rightsholder.
+
+Russian version:
+
+Все права защищены.
+
+Материалы данного сайта и репозитория, включая тексты, оформление, структуру страниц, фотографии, видео, кейсы, интерфейсные элементы и иные материалы, являются объектами авторского права и смежных прав.
+
+Любое копирование, переработка, повторная публикация, распространение, коммерческое использование или иное использование материалов без предварительного письменного согласия правообладателя запрещено.

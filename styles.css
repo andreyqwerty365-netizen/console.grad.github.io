@@ -2369,12 +2369,23 @@ a {
 }
 
 .footer {
-  padding: 16px 0 48px;
+  padding: 18px 0 48px;
   display: flex;
   justify-content: space-between;
-  gap: 18px;
+  gap: 24px;
+  align-items: flex-start;
   color: rgba(245, 247, 255, 0.56);
   font-size: 0.9rem;
+}
+
+.footer__brand,
+.footer__links,
+.footer__note {
+  min-width: 0;
+}
+
+.footer__brand {
+  max-width: 320px;
 }
 
 .footer p,
@@ -2391,6 +2402,94 @@ a {
 .footer__note {
   max-width: 420px;
   text-align: right;
+}
+
+.footer__links {
+  display: grid;
+  gap: 10px;
+}
+
+.footer__links a {
+  color: rgba(245, 247, 255, 0.78);
+  transition: color 180ms ease;
+}
+
+.footer__links a:hover {
+  color: var(--text);
+}
+
+.legal-page {
+  padding-top: 26px;
+  padding-bottom: 72px;
+}
+
+.legal-layout {
+  display: grid;
+  gap: 22px;
+}
+
+.legal-card {
+  padding: 28px;
+  border-radius: calc(var(--radius-xl) - 6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    rgba(8, 13, 30, 0.86);
+  box-shadow: var(--shadow);
+}
+
+.legal-card h2,
+.legal-card h3 {
+  margin: 0 0 14px;
+  font-family: "Orbitron", "Segoe UI", sans-serif;
+}
+
+.legal-card h2 {
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+}
+
+.legal-card h3 {
+  font-size: 1.02rem;
+  color: var(--yellow);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.legal-card p,
+.legal-card li {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.legal-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.legal-card p:last-child,
+.legal-card ul:last-child {
+  margin-bottom: 0;
+}
+
+.legal-meta {
+  display: grid;
+  gap: 12px;
+}
+
+.legal-meta strong {
+  color: var(--text);
+}
+
+.legal-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-top: 10px;
+}
+
+.legal-inline-links a {
+  color: var(--blue);
 }
 
 .mobile-cta {
@@ -2715,6 +2814,10 @@ a {
 
   .footer__note {
     text-align: left;
+  }
+
+  .footer {
+    flex-direction: column;
   }
 
   .brief-options {
