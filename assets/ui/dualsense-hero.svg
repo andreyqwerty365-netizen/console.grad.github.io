@@ -1,0 +1,79 @@
+<svg width="900" height="760" viewBox="0 0 900 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="heroGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(451 280) rotate(90) scale(290 350)">
+      <stop stop-color="#57C6FF" stop-opacity="0.42"/>
+      <stop offset="0.62" stop-color="#57C6FF" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#57C6FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shell" x1="450" y1="98" x2="450" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.34" stop-color="#EEF4FF"/>
+      <stop offset="1" stop-color="#CCD9F3"/>
+    </linearGradient>
+    <linearGradient id="centerBody" x1="450" y1="172" x2="450" y2="592" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#132443"/>
+      <stop offset="1" stop-color="#081225"/>
+    </linearGradient>
+    <radialGradient id="stickGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(450 434) rotate(90) scale(180 220)">
+      <stop stop-color="#7DD7FF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#7DD7FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="light" x1="318" y1="228" x2="581" y2="228" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#57C6FF"/>
+      <stop offset="0.5" stop-color="#B5E9FF"/>
+      <stop offset="1" stop-color="#57C6FF"/>
+    </linearGradient>
+    <filter id="shadow" x="54" y="82" width="792" height="629" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="24"/>
+      <feGaussianBlur stdDeviation="28"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0117647 0 0 0 0 0.0352941 0 0 0 0 0.105882 0 0 0 0.45 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape"/>
+    </filter>
+  </defs>
+  <ellipse cx="450" cy="370" rx="320" ry="240" fill="url(#heroGlow)"/>
+  <g filter="url(#shadow)">
+    <path d="M255 118C192 137 150 185 134 253C110 353 112 456 128 541C135 578 166 606 203 606H249C284 606 314 584 325 551L352 468C360 444 381 427 406 425H494C519 427 540 444 548 468L575 551C586 584 616 606 651 606H697C734 606 765 578 772 541C788 456 790 353 766 253C750 185 708 137 645 118L563 103H337L255 118Z" fill="url(#shell)"/>
+    <path d="M338 175C293 177 254 204 233 242C210 285 205 347 212 441C214 469 237 491 265 491H635C663 491 686 469 688 441C695 347 690 285 667 242C646 204 607 177 562 175H338Z" fill="url(#centerBody)"/>
+    <rect x="332" y="143" width="236" height="120" rx="34" fill="url(#centerBody)" stroke="#2B3E63" stroke-width="4"/>
+    <rect x="318" y="219" width="264" height="10" rx="5" fill="url(#light)"/>
+    <g opacity="0.95">
+      <rect x="387" y="292" width="126" height="44" rx="22" fill="#0A1428" stroke="#22365C" stroke-width="3"/>
+      <path d="M432 316H468" stroke="#516B97" stroke-width="4" stroke-linecap="round"/>
+      <path d="M450 298V334" stroke="#516B97" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="450" cy="316" r="10" stroke="#516B97" stroke-width="3"/>
+    </g>
+    <g>
+      <circle cx="361" cy="408" r="68" fill="#111C33" stroke="#2B3D61" stroke-width="4"/>
+      <circle cx="361" cy="408" r="44" fill="#1D2A45"/>
+      <circle cx="361" cy="408" r="20" fill="#111A2E"/>
+    </g>
+    <g>
+      <circle cx="539" cy="408" r="68" fill="#111C33" stroke="#2B3D61" stroke-width="4"/>
+      <circle cx="539" cy="408" r="44" fill="#1D2A45"/>
+      <circle cx="539" cy="408" r="20" fill="#111A2E"/>
+    </g>
+    <g fill="#F5F7FF" opacity="0.96">
+      <rect x="254" y="300" width="26" height="88" rx="13"/>
+      <rect x="223" y="331" width="88" height="26" rx="13"/>
+      <circle cx="267" cy="287" r="13"/>
+      <circle cx="267" cy="401" r="13"/>
+      <circle cx="210" cy="344" r="13"/>
+      <circle cx="324" cy="344" r="13"/>
+    </g>
+    <g stroke="#DCE5F6" stroke-width="5" opacity="0.88">
+      <circle cx="657" cy="310" r="22"/>
+      <path d="M657 292L644 315H670L657 292Z"/>
+      <circle cx="711" cy="344" r="22"/>
+      <circle cx="657" cy="378" r="22"/>
+      <path d="M645 366L669 390" />
+      <path d="M669 366L645 390" />
+      <rect x="618" y="323" width="39" height="39" rx="6"/>
+    </g>
+    <rect x="407" y="354" width="86" height="22" rx="11" fill="#0B1427" stroke="#22365B" stroke-width="3"/>
+    <rect x="424" y="532" width="52" height="10" rx="5" fill="#7AB9FF" opacity="0.8"/>
+    <ellipse cx="450" cy="426" rx="190" ry="118" fill="url(#stickGlow)"/>
+  </g>
+</svg>

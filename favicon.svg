@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">КонсольГрад</title>
+  <desc id="desc">Фавикон игрового бренда КонсольГрад в виде неонового геймпада.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071120"/>
+      <stop offset="100%" stop-color="#101d39"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe253"/>
+      <stop offset="55%" stop-color="#57c6ff"/>
+      <stop offset="100%" stop-color="#8a63ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="url(#bg)"/>
+  <path d="M33 52c0-7 5-12 12-12h38c7 0 12 5 12 12v14c0 11-9 20-20 20H53c-11 0-20-9-20-20V52Z" fill="#0a1429" stroke="url(#accent)" stroke-width="6"/>
+  <path d="M44 64h18M53 55v18" stroke="#ffe253" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="82" cy="58" r="5" fill="#57c6ff"/>
+  <circle cx="92" cy="68" r="5" fill="#8a63ff"/>
+  <circle cx="72" cy="68" r="5" fill="#ff67d4"/>
+  <circle cx="82" cy="78" r="5" fill="#57c6ff"/>
+  <rect x="54" y="51" width="20" height="8" rx="4" fill="#d9e2ff" opacity=".9"/>
+</svg>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS Lounge — локальная система управления игровыми сессиями</title>
+  <meta name="description" content="PS Lounge — локальная система для управления игровыми станциями: сессии, оплаты, продления, отчёты, журнал действий, PIN-защита и XLSX-экспорт.">
+  <meta name="author" content="КонсольГрад">
+  <meta name="copyright" content="КонсольГрад, 2026. Все права защищены.">
+  <link rel="canonical" href="https://andreyqwerty365-netizen.github.io/pslounge.html">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PS Lounge — локальная система управления игровыми сессиями">
+  <meta property="og:description" content="Система для игровых зон: учёт времени, оплаты, платные продления, отчёты, журнал действий, настройки через интерфейс и локальная устойчивость данных.">
+  <meta property="og:url" content="https://andreyqwerty365-netizen.github.io/pslounge.html">
+  <meta property="og:site_name" content="КонсольГрад">
+  <meta property="og:image" content="https://andreyqwerty365-netizen.github.io/assets/cases/spa-lounge/case-01.png">
+  <meta property="og:image:alt" content="PS Lounge — программный модуль для управления игровой зоной">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PS Lounge — локальная система управления игровыми сессиями">
+  <meta name="twitter:description" content="Сессии, оплаты, отчёты, журнал действий, PIN-защита и локальная устойчивость данных для игровых зон.">
+  <meta name="twitter:image" content="https://andreyqwerty365-netizen.github.io/assets/cases/spa-lounge/case-01.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PS Lounge",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Локальный запуск в браузере",
+      "description": "Локальная система управления игровыми станциями: учёт времени, оплаты, продления, отчёты, журнал действий, PIN-защита и экспорт XLSX.",
+      "provider": {
+        "@type": "Organization",
+        "name": "КонсольГрад",
+        "url": "https://andreyqwerty365-netizen.github.io/"
+      },
+      "url": "https://andreyqwerty365-netizen.github.io/pslounge.html"
+    }
+  </script>
+</head>
+<body>
+  <canvas class="energy-grid" id="energy-grid" aria-hidden="true"></canvas>
+
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html#hero">
+        <img class="brand__logo" src="./assets/brand/consolegrad-mark.svg" alt="Логотип КонсольГрад">
+        <span class="brand__text">
+          <strong>КонсольГрад</strong>
+          <span>игровые зоны под ключ</span>
+        </span>
+      </a>
+
+      <div class="topbar__actions">
+        <a class="topbar__cta" href="./index.html#brief">Получить стартовый план</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section legal-page product-page">
+        <div class="product-hero reveal">
+          <div class="product-hero__copy">
+            <span class="section-heading__eyebrow">Продукт</span>
+            <h1>PS Lounge — локальная система смены, где администратор ведёт станции, деньги, продления, журнал и настройки в одном рабочем окне.</h1>
+            <p>
+              Это не витрина ради вау-эффекта. PS Lounge собирает реальную операционную логику площадки:
+              запуск и завершение сессий, оплаты, доигровки, служебные действия, отчёты по периоду и настройку конфигурации зала.
+            </p>
+            <div class="product-hero__actions">
+              <a class="button button--primary" href="./index.html#brief">Запросить стартовый план</a>
+              <a class="button button--ghost" href="./index.html#software">Вернуться к демо на лендинге</a>
+            </div>
+          </div>
+
+          <aside class="product-slab tilt">
+            <span class="product-slab__eyebrow">Что внутри</span>
+            <ul class="product-slab__list">
+              <li>Станции, статусы, тарифы, остаток времени и история оплаты по каждой сессии</li>
+              <li>Платные продления, служебные минуты и действия администратора без ручных калькуляций</li>
+              <li>Настройки станций и тарифов через UI, без правки кода и без постоянного участия разработчика</li>
+              <li>Журнал действий, многолистовой XLSX-отчёт, достижения смены и PIN-защита настроек</li>
+            </ul>
+            <div class="product-slab__preview">
+              <img src="./assets/pslounge-doc/image1.png" alt="Основной экран PS Lounge с игровыми станциями и действиями администратора" loading="lazy" width="1279" height="1284">
+            </div>
+          </aside>
+        </div>
+
+        <section class="product-gallery reveal">
+          <div class="section-heading section-heading--left">
+            <span class="section-heading__eyebrow">Экраны продукта</span>
+            <h2>Не одна красивая панель, а набор рабочих экранов под смену, отчёты и настройку площадки.</h2>
+            <p>Ниже собраны реальные экраны второй версии: смена со станциями и действиями, настройки через интерфейс, журнал, XLSX-аналитика и слой достижений по смене.</p>
+          </div>
+
+          <div class="product-gallery__lead">
+            <figure class="product-shot tilt">
+              <img src="./assets/pslounge-doc/image1.png" alt="Главный экран PS Lounge со станциями, таймерами и действиями по сессии" loading="lazy" width="1279" height="1284">
+              <figcaption>
+                <strong>Главный экран смены</strong>
+                На одном экране видны станции, статус, остаток времени, оплата, активная панель управления и следующий шаг по сессии.
+              </figcaption>
+            </figure>
+            <figure class="product-shot tilt">
+              <img src="./assets/pslounge-doc/image19.png" alt="Окно настроек PS Lounge с управлением станциями и тарифами через интерфейс" loading="lazy" width="1119" height="748">
+              <figcaption>
+                <strong>Настройки через интерфейс</strong>
+                Через интерфейс меняются список платформ, типы станций, тарифные сетки и порядок отображения в зале.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="product-gallery__grid">
+            <figure class="product-shot tilt">
+              <img src="./assets/pslounge-doc/image21.png" alt="Журнал действий PS Lounge с фильтрами, поиском и экспортом" loading="lazy" width="964" height="1074">
+              <figcaption>
+                <strong>Журнал действий</strong>
+                Фильтры по станции и уровню, поиск по событиям, экспорт TXT и быстрый разбор спорных действий по смене.
+              </figcaption>
+            </figure>
+            <figure class="product-shot tilt">
+              <img src="./assets/pslounge-doc/image14.png" alt="Многолистовой XLSX-отчёт PS Lounge с выручкой, загрузкой и аналитикой" loading="lazy" width="1778" height="1396">
+              <figcaption>
+                <strong>XLSX-отчёт за период</strong>
+                Сводка по выручке, средней длительности, загрузке станций, оплатам и управленческим разрезам по датам.
+              </figcaption>
+            </figure>
+            <figure class="product-shot tilt">
+              <img src="./assets/pslounge-doc/image27.png" alt="Экран достижений PS Lounge с KPI по сессиям и активности площадки" loading="lazy" width="721" height="681">
+              <figcaption>
+                <strong>Внутренняя витрина KPI</strong>
+                Отдельный экран с целями, прогрессом и завершёнными достижениями, который помогает держать темп смены и видеть KPI вживую.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <div class="product-grid">
+          <article class="product-card reveal tilt">
+            <h2>Сессия хранит не только время, но и деньги</h2>
+            <p>Каждая игровая сессия остаётся цельной записью: время, тариф, сумма, способ оплаты, доначисления и текущее состояние станции.</p>
+            <ul>
+              <li>видно остаток времени, окончание, оплаченный тариф и фактическую форму оплаты;</li>
+              <li>данные не размазываются по бумажкам и чатам, а остаются внутри одной сессии;</li>
+              <li>эти же данные потом попадают в журнал, отчёты и управленческую аналитику.</li>
+            </ul>
+          </article>
+
+          <article class="product-card reveal tilt">
+            <h2>Продления и служебные действия не вынесены в отдельный софт</h2>
+            <p>Панель смены собрана так, чтобы администратор не прыгал между калькулятором, таблицей и ручными заметками.</p>
+            <ul>
+              <li>способы оплаты: наличные, карта, перевод;</li>
+              <li>фиксированные платные продления на дополнительные интервалы;</li>
+              <li>служебные +10, -10 и другие корректировки в одном сценарии с сессией.</li>
+            </ul>
+          </article>
+
+          <article class="product-card reveal tilt">
+            <h2>Отчёты строятся по периоду, станции и типу оплаты</h2>
+            <p>Система даёт управляющему не только текущий экран смены, но и нормальный слой контроля за диапазон дат.</p>
+            <ul>
+              <li>отчёты по сессиям и начислениям за выбранный период;</li>
+              <li>фильтрация по типу станции и способу оплаты;</li>
+              <li>сводка по выручке, среднему чеку, загрузке и графику по дням.</li>
+            </ul>
+          </article>
+
+          <article class="product-card reveal tilt">
+            <h2>Площадка настраивается под ваш реальный зал</h2>
+            <p>Станции, типы платформ и тарифные сетки редактируются через UI, поэтому продукт можно адаптировать под конкретную конфигурацию площадки.</p>
+            <ul>
+              <li>типы станций: PlayStation, Nintendo Switch, симулятор;</li>
+              <li>тарифы, цены, интервалы, логика времени и пороги доигровки;</li>
+              <li>названия и состав станций под фактическую конфигурацию зала.</li>
+            </ul>
+          </article>
+        </div>
+
+        <section class="product-band reveal">
+          <div class="section-heading section-heading--left">
+            <span class="section-heading__eyebrow">Смена</span>
+            <h2>Что получает администратор в реальной работе</h2>
+            <p>Главная задача здесь не “красиво показать зал”, а сократить ручные действия и держать смену в управляемом состоянии.</p>
+          </div>
+
+          <div class="product-flow">
+            <article class="product-flow__item tilt">
+              <span>01</span>
+              <h3>Запуск, продление и завершение сессии</h3>
+              <p>Выбор станции, тарифа, оплаты, старт, продление, доигровка и завершение собраны в одном рабочем цикле.</p>
+            </article>
+            <article class="product-flow__item tilt">
+              <span>02</span>
+              <h3>Защита от пустых и спорных действий</h3>
+              <p>Система снижает риск дублей, пустых операций и хаоса при ручных корректировках внутри смены.</p>
+            </article>
+            <article class="product-flow__item tilt">
+              <span>03</span>
+              <h3>Восстановление сессии и журнал</h3>
+              <p>Ошибочно закрытую сессию можно вернуть, а ключевые события и действия администратора остаются в журнале для разбора.</p>
+            </article>
+          </div>
+        </section>
+
+        <div class="product-grid product-grid--secondary">
+          <article class="product-card reveal tilt">
+            <h2>Многолистовой XLSX вместо простого журнала</h2>
+            <p>Экспорт нужен не только ради архива: это уже нормальный управленческий слой для владельца и управляющего.</p>
+            <ul>
+              <li>отдельные листы по сводке, сессиям и начислениям;</li>
+              <li>разрезы по оплате, станциям и дням;</li>
+              <li>Audit-лист при обнаружении расхождений в данных.</li>
+            </ul>
+          </article>
+
+          <article class="product-card reveal tilt">
+            <h2>Журнал действий и экспорт TXT</h2>
+            <p>Спорные моменты больше не завязаны только на память администратора и устные пояснения по смене.</p>
+            <ul>
+              <li>фильтры по станции и типу записи;</li>
+              <li>поиск по событиям и служебным операциям;</li>
+              <li>выгрузка журнала для внутреннего разбора.</li>
+            </ul>
+          </article>
+
+          <article class="product-card reveal tilt">
+            <h2>PIN-защита настроек</h2>
+            <p>Критичные параметры не должны свободно меняться в каждой смене без контроля и подтверждения.</p>
+            <ul>
+              <li>вход в настройки по PIN-коду;</li>
+              <li>смена PIN и ограничение числа попыток;</li>
+              <li>временная блокировка после серии ошибок.</li>
+            </ul>
+          </article>
+
+          <article class="product-card reveal tilt">
+            <h2>Локальная устойчивость данных</h2>
+            <p>PS Lounge рассчитан на локальный сценарий эксплуатации и аккуратно относится к состоянию текущей смены.</p>
+            <ul>
+              <li>основное состояние, резервная копия и fallback-чтение;</li>
+              <li>история snapshots для локальной версии;</li>
+              <li>документация для запуска и эксплуатации без обязательного интернета.</li>
+            </ul>
+          </article>
+        </div>
+
+        <section class="product-band reveal">
+          <div class="section-heading section-heading--left">
+            <span class="section-heading__eyebrow">Кому полезно</span>
+            <h2>Когда PS Lounge даёт реальную выгоду площадке</h2>
+          </div>
+
+          <div class="product-columns">
+            <article class="product-column tilt">
+              <h3>Для владельца</h3>
+              <p>Видно загрузку, выручку, структуру оплат и проблемные места смены, а не только красивый интерфейс на экране.</p>
+            </article>
+            <article class="product-column tilt">
+              <h3>Для управляющего</h3>
+              <p>Можно быстрее менять тарифы, состав станций и правила работы площадки без постоянной зависимости от разработчика.</p>
+            </article>
+            <article class="product-column tilt">
+              <h3>Для администратора</h3>
+              <p>Проще работать в смене: меньше ручных таймеров, меньше ошибок и меньше хаоса при продлениях, оплатах и закрытии сессий.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="product-cta reveal tilt">
+          <div>
+            <span class="section-heading__eyebrow">Следующий шаг</span>
+            <h2>Если хотите запустить зону не только с железом и интерьером, но и с понятной операционной логикой, отправьте стартовый план.</h2>
+          </div>
+          <div class="product-cta__actions">
+            <a class="button button--primary" href="./index.html#brief">Заполнить заявку</a>
+            <a class="button button--ghost" href="./index.html#contacts">Связаться напрямую</a>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <img class="footer__logo" src="./assets/brand/consolegrad-mark.svg" alt="Логотип КонсольГрад">
+        <p>КонсольГрад</p>
+        <span>Игровые зоны под ключ для заведений, отелей, СПА, сервисных и развлекательных пространств.</span>
+      </div>
+      <div class="footer__links">
+        <a href="./index.html">Главная</a>
+        <a href="./privacy.html">Политика конфиденциальности</a>
+        <a href="./terms.html">Пользовательское соглашение</a>
+        <a href="./legal.html">Правовая информация</a>
+      </div>
+      <div class="footer__note">
+        <strong>© 2026 КонсольГрад. Все права защищены.</strong>
+        <span>Тексты, фотографии, видео, кейсы и элементы оформления сайта охраняются законом и не могут использоваться без письменного согласия правообладателя.</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
