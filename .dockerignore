@@ -1,0 +1,7 @@
+.git
+.agent
+.codex
+tests
+share
+*.md
+output
