@@ -28,6 +28,14 @@ Assert-True ($agents -match [regex]::Escape('D:\Проекты\Сайт\Сайт
 $config = Get-Content -LiteralPath (Join-Path $root '.codex\config.toml') -Raw
 Assert-True ($config -match [regex]::Escape('D:\\Проекты\\Сайт\\Сайт')) '.codex/config.toml contains an outdated writable root'
 
+$publicBaseUrl = 'https://website-andrey3322.amvera.io/'
+$seoFiles = @('index.html', 'pslounge.html', 'robots.txt', 'sitemap.xml')
+foreach ($seoFile in $seoFiles) {
+  $seoContent = Get-Content -LiteralPath (Join-Path $root $seoFile) -Raw
+  Assert-True ($seoContent -match [regex]::Escape($publicBaseUrl)) "$seoFile must reference the Amvera public URL"
+  Assert-True ($seoContent -notmatch 'andreyqwerty365-netizen\.github\.io') "$seoFile still references GitHub Pages"
+}
+
 foreach ($page in $pages) {
   $path = Join-Path $root $page
   $html = Get-Content -LiteralPath $path -Raw
