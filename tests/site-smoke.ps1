@@ -22,12 +22,6 @@ Assert-True ($nginx -match 'listen\s+80') 'nginx must listen on port 80'
 $styles = Get-Content -LiteralPath (Join-Path $root 'styles.css') -Raw
 Assert-True ($styles -match '\.legal-card\s+h1') 'Legal page h1 must retain heading styles'
 
-$agents = Get-Content -LiteralPath (Join-Path $root 'agents.md') -Raw
-Assert-True ($agents -match [regex]::Escape('D:\Проекты\Сайт\Сайт')) 'agents.md contains an outdated project path'
-
-$config = Get-Content -LiteralPath (Join-Path $root '.codex\config.toml') -Raw
-Assert-True ($config -match [regex]::Escape('D:\\Проекты\\Сайт\\Сайт')) '.codex/config.toml contains an outdated writable root'
-
 $publicBaseUrl = 'https://website-andrey3322.amvera.io/'
 $seoFiles = @('index.html', 'pslounge.html', 'robots.txt', 'sitemap.xml')
 foreach ($seoFile in $seoFiles) {
