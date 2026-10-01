@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://website-andrey3322.amvera.io/sitemap.xml
+Sitemap: https://andreyqwerty365-netizen.github.io/console.grad.github.io/sitemap.xml

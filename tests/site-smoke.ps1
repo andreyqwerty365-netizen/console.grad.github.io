@@ -22,12 +22,12 @@ Assert-True ($nginx -match 'listen\s+80') 'nginx must listen on port 80'
 $styles = Get-Content -LiteralPath (Join-Path $root 'styles.css') -Raw
 Assert-True ($styles -match '\.legal-card\s+h1') 'Legal page h1 must retain heading styles'
 
-$publicBaseUrl = 'https://website-andrey3322.amvera.io/'
+$publicBaseUrl = 'https://andreyqwerty365-netizen.github.io/console.grad.github.io/'
 $seoFiles = @('index.html', 'pslounge.html', 'robots.txt', 'sitemap.xml')
 foreach ($seoFile in $seoFiles) {
   $seoContent = Get-Content -LiteralPath (Join-Path $root $seoFile) -Raw
-  Assert-True ($seoContent -match [regex]::Escape($publicBaseUrl)) "$seoFile must reference the Amvera public URL"
-  Assert-True ($seoContent -notmatch 'andreyqwerty365-netizen\.github\.io') "$seoFile still references GitHub Pages"
+  Assert-True ($seoContent -match [regex]::Escape($publicBaseUrl)) "$seoFile must reference the GitHub Pages public URL"
+  Assert-True ($seoContent -notmatch 'amvera\.io') "$seoFile still references Amvera"
 }
 
 foreach ($page in $pages) {

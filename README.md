@@ -1,5 +1,7 @@
 # КонсольГрад
 
+Сайт: https://andreyqwerty365-netizen.github.io/console.grad.github.io/
+
 Коммерческий лендинг команды, занимавшейся проектированием и запуском игровых комнат под ключ: от подбора оборудования и планировки до монтажа PlayStation-зон и подготовки площадки к работе.
 
 ![Реализованная игровая комната](assets/cases/spa-lounge/case-01-1600.webp)
@@ -34,7 +36,7 @@ PS Lounge представлен на сайте как отдельный вн�
 - PowerShell smoke-тест;
 - Docker и Nginx;
 - GitHub Actions;
-- Amvera для production-развёртывания.
+- GitHub Pages для публикации сайта.
 
 ## Структура
 
@@ -45,7 +47,7 @@ script.js           интерактивность и анимации
 styles.css          визуальная система и адаптивность
 assets/             фото, видео, логотипы и UI-материалы
 tests/              проверки структуры и ссылок
-Dockerfile          production-контейнер
+Dockerfile          контейнер для альтернативного запуска
 nginx.conf          конфигурация веб-сервера
 ```
 
@@ -68,7 +70,13 @@ node --check script.js
 
 ## Публикация
 
-Amvera собирает `Dockerfile` из ветки `main`. Контейнер Nginx раздаёт статические файлы на порту 80.
+Сайт публикуется на GitHub Pages из ветки `main` через GitHub Actions (`.github/workflows/pages.yml`).
+
+Адрес: https://andreyqwerty365-netizen.github.io/console.grad.github.io/
+
+В Settings → Pages источник публикации должен быть установлен в **GitHub Actions**. После каждого push в `main` workflow проверяет сайт и публикует статические страницы и материалы из `assets/`. Amvera больше не используется.
+
+Dockerfile и конфигурация Nginx сохранены для альтернативного запуска.
 
 ## Связанный проект
 
